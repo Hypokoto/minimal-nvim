@@ -26,6 +26,7 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
+      animate = { enabled = false },
       dashboard = {
         preset = {
           header = table.concat(ascii_header, "\n"),

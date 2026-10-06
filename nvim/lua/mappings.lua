@@ -34,7 +34,7 @@ map("n", "<leader>mp", "<cmd>RenderMarkdown toggle<CR>", { desc = "Toggle markdo
 
 -- VS Code style terminal toggle (maps to NvChad horizontal terminal)
 map({"n", "t"}, "<C-`>", function()
-  require("nvchad.term").toggle({ pos = "sp", id = "htoggleTerm" })
+  require("nvchad.term").toggle({ pos = "float", id = "floatTerm" })
 end, { desc = "Toggle Terminal (VS Code style)" })
 
 -- Right-Click Menu

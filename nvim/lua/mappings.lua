@@ -30,5 +30,17 @@ map("n", "<leader>x", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "Close buffer" })
 
--- Markdown render toggle (MeanderingProgrammer/render-markdown.nvim)
 map("n", "<leader>mp", "<cmd>RenderMarkdown toggle<CR>", { desc = "Toggle markdown render" })
+
+-- VS Code style terminal toggle (maps to NvChad horizontal terminal)
+map({"n", "t"}, "<C-`>", function()
+  require("nvchad.term").toggle({ pos = "sp", id = "htoggleTerm" })
+end, { desc = "Toggle Terminal (VS Code style)" })
+
+-- Right-Click Menu
+map("n", "<RightMouse>", function()
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = true })
+end, { desc = "Open Context Menu" })
+

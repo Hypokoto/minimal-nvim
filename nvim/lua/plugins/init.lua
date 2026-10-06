@@ -216,4 +216,27 @@ return {
       },
     },
   },
+  
+  -- ==========================================================
+  -- Right-click Menu (nvzone/menu)
+  -- ==========================================================
+  {
+    "nvzone/volt",
+    lazy = true,
+  },
+  {
+    "nvzone/menu",
+    lazy = true,
+  },
+
+  -- ==========================================================
+  -- Dropbar — VS Code style breadcrumbs
+  -- ==========================================================
+  {
+    "Bekaboo/dropbar.nvim",
+    event = "BufReadPre",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
 }

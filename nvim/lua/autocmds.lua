@@ -31,9 +31,4 @@ vim.api.nvim_create_autocmd("BufDelete", {
   end,
 })
 
--- Initialize Minimal IDE plugin
-vim.schedule(function()
-  pcall(function()
-    require("ide").setup()
-  end)
-end)
+
